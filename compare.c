@@ -12,7 +12,7 @@
 /**************************************************************************************************/
 
 /*
- * Revision log:test
+ * Revision log:
  *
  * Created by Zhangjunxiang, 2014/09/13
  *
@@ -27,6 +27,7 @@
 
 int Cmd();
 int Find();
+int Ex();
 
 typedef struct DataNode
 {
@@ -72,17 +73,18 @@ int ShowCmd(tDataNode * prior)
 
 static tDataNode element[] =
 {
-    {"compare", "This is a compare function!", Cmd,&element[1]},
+    {"compare", "This is a compare function!", Cmd, &element[1]},
     {"description", "How to deal with two figles.", NULL, &element[2]},
-    {"help", "Help Documents!", NULL,&element[3]},
-    {"exit","Exit the program!", NULL, NULL}
+    {"help", "Help Documents!", NULL, &element[3]},
+    {"exit", "Exit the program!", Ex, NULL}
 };
+
+int i = 0;
 
 main()
 {
-
-    printf("\n***There is a Cmd Program.***\n");
-    while(1)
+    printf(" \n***There is a Compare Program.***\n ");
+    while(!i)
     {
         char cmd[CMD_LEN];
         printf(" \nInput a cmd number > ");
@@ -113,3 +115,8 @@ int Find(char * cmd)
 
 }
 
+int Ex(char * cmd)
+{
+    i = 1;
+    return 0;
+}
