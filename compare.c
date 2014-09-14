@@ -74,7 +74,7 @@ int ShowCmd(tDataNode * prior)
 static tDataNode element[] =
 {
     {"compare", "This is a compare function!", Cmd, &element[1]},
-    {"description", "How to deal with two figles.", NULL, &element[2]},
+    {"description", "How to deal with two figures.", NULL, &element[2]},
     {"help", "Help Documents!", NULL, &element[3]},
     {"exit", "Exit the program!", Ex, NULL}
 };
@@ -87,7 +87,7 @@ main()
     while(!i)
     {
         char cmd[CMD_LEN];
-        printf(" \nInput a cmd number > ");
+        printf(" \nInput a command > ");
         scanf("%s", cmd);
         Find(cmd);
     }
