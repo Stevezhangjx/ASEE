@@ -101,17 +101,17 @@ int Cmd()
 
 int Find(char * cmd)
 {
-        tDataNode *p = Search(element, cmd);
-        if( p == NULL)
-        {
-            printf("This is a wrong cmd!\n ");
-            return 0;
-        }
-        printf("%s - %s\n", p->cmd, p->desc);
-        if(p->handler != NULL)
-        {
-             p->handler();
-        }
+    tDataNode *p = Search(element, cmd);
+    if( p == NULL)
+    {
+        printf("This is a wrong cmd!\n ");
+        return 0;
+    }
+    printf("%s - %s\n", p->cmd, p->desc);
+    if(p->handler != NULL)
+    {
+        p->handler();
+    }
 
 }
 
