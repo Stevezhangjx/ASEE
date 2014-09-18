@@ -73,9 +73,9 @@ int ShowCmd(tDataNode * prior)
 
 static tDataNode element[] =
 {
-    {"compare", "This is a compare function!", Cmd, &element[1]},
+    {"compare", "This is a compare function!", NULL, &element[1]},
     {"description", "How to deal with two figures.", NULL, &element[2]},
-    {"help", "Help Documents!", NULL, &element[3]},
+    {"help", "Help Documents!", Cmd, &element[3]},
     {"exit", "Exit the program!", Ex, NULL}
 };
 
